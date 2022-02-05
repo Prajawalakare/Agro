@@ -1,20 +1,265 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+   
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
     <link rel="stylesheet" type="text/css" href="./css/style.css">
-    <title>Agro</title>
-</head>
-<body>
-    <h1 class="text-center">Document</h1>
+    <title>Agroculture</title>
+  </head>
+  <body>
+
+    <!--Navbar 1st-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand heading display-2" href="#">
+          <img src="./assets/logo/agriculture.png" alt="agro"> Agroculture
+        </a>
+          <form class="d-flex">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-info" type="submit">Search</button>
+          </form>
+        </div>
+      </div>
+    </nav>
+
+    <!--Navbar 2nd-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-info">
+      <div class="container-fluid justify-content-center">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active navbar-menu" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active navbar-menu" href="#">Category</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active navbar-menu" href="#">Product</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active navbar-menu" href="#">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    
+    <!--container-home-->
+    <div class="container-home">
+      <div class="row">
+
+        <div class="col-md-5 mt-3">
+          <img src="./assets/img/home-img.png" alt="home-img" class="img-fluid" >
+        </div>
+
+        <div class="col-md-3 mt-3">
+          <div class="card-buyer p-3">
+            <h3 class="text-center display-6 mb-3">Join as Buyer</h3>
+                <p class="text-center">
+                 <img src="./assets/img/buyer-img.png">
+                </p>
+               <input type="email" placeholder="E-mail" class="text-center w-100 login-input"><br><br>
+  
+               <input type="password" placeholder="Password" class="text-center w-100 login-input"><br><br>
+ 
+                <div class="text-center">
+                  <button type="submit" class="btn btn-info w-50  login-btn"><i class="fas fa-user me-2"></i>Login</button>
+                </div>
+
+          </div>
+        </div>
+
+        <div class="col-md-3 mt-3">
+          <div class="card-customer p-3">
+            <h3 class="text-center display-6 mb-3">Join as Mentor</h3>
+            <p class="text-center">
+             <img src="./assets/img/businessman.png">
+            </p>
+           <input type="email" placeholder="E-mail" class="text-center w-100 login-input"><br><br>
+
+           <input type="password" placeholder="Password" class="text-center w-100 login-input"><br><br>
+
+            <div class="text-center">
+              <button class="btn btn-info w-50  login-btn"><i class="fas fa-sign-in-alt me-2"></i>Join</button>
+            </div>
+          </div>
+        </div>
+
+        </div>
+    </div>
+
+    <!-- Product Container 1-->
+    <h2 class="text-center mt-3 display-4 mb-3">PRODUCTS</h2>
+    <div class="container">
+ 
+        <div class="row container-1">
+        <div class="col-md-4">
+          <div class="card card-info" style="width: 20rem;">
+            <img src="./assets/img/apple.png" class="card-img-top" style="width: 18rem; height: 15rem;" alt="apple">
+            <div class="card-body">
+              <h2 class="card-title text-center">Apple</h2>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <h4 class="text-center"> 
+                <i class="fas fa-minus-circle me-2" onClick="decKg('apple')"></i> 
+                 <span id="qnt-apple">1</span> KG 
+                <i class="fas fa-plus-circle ms-2" onClick="incKg('apple')"></i>
+              </h4>
+              <a href="#" class="btn btn-info w-100 btn-product">Add to Cart</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card card-info" style="width: 20rem;">
+            <img src="./assets/img/banana.png" class="card-img-top" style="width: 18rem; height: 15rem;" alt="Banana">
+            <div class="card-body">
+              <h2 class="card-title text-center">Banana</h2>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <h4 class="text-center"> 
+                <i class="fas fa-minus-circle me-2" onClick="decKg('banana')"></i> 
+                 <span id="qnt-banana">1</span> KG 
+                <i class="fas fa-plus-circle ms-2" onClick="incKg('banana')"></i>
+              </h4>
+              <a href="#" class="btn btn-info w-100 btn-product">Add to Cart</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card card-info" style="width: 20rem;">
+            <img src="./assets/img/grapes.png" class="card-img-top" style="width: 18rem; height: 15rem;" alt="grapes">
+            <div class="card-body">
+              <h2 class="card-title text-center">Grapes</h2>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <h4 class="text-center"> 
+                <i class="fas fa-minus-circle me-2" onClick="decKg('grapes')"></i> 
+                 <span id="qnt-grapes">1</span> KG 
+                <i class="fas fa-plus-circle ms-2" onClick="incKg('grapes')"></i>
+              </h4>
+              <a href="#" class="btn btn-info w-100 btn-product">Add to Cart</a>
+            </div>
+          </div>
+        </div>
+
+        </div>
+
+        <!--Product container-2-->
+        <div class="row container-2">
+          <div class="col-md-4">
+            <div class="card card-info" style="width: 20rem;">
+              <img src="./assets/img/orange.png" class="card-img-top" style="width: 18rem; height: 15rem;" alt="orange">
+              <div class="card-body">
+                <h2 class="card-title text-center">Orange</h2>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <h4 class="text-center"> 
+                  <i class="fas fa-minus-circle me-2" onClick="decKg('orange')"></i> 
+                   <span id="qnt-orange">1</span> KG 
+                  <i class="fas fa-plus-circle ms-2" onClick="incKg('orange')"></i>
+                </h4>
+                <a href="#" class="btn btn-info w-100 btn-product">Add to Cart</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="card card-info" style="width: 20rem;">
+              <img src="./assets/img/tomato.png" class="card-img-top" style="width: 18rem; height: 15rem;" alt="tomato">
+              <div class="card-body">
+                <h2 class="card-title text-center">Tomato</h2>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <h4 class="text-center"> 
+                  <i class="fas fa-minus-circle me-2" onClick="decKg('tomato')"></i> 
+                   <span id="qnt-tomato">1</span> KG 
+                  <i class="fas fa-plus-circle ms-2" onClick="incKg('tomato')"></i>
+                </h4>
+                <a href="#" class="btn btn-info w-100 btn-product">Add to Cart</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="card card-info" style="width: 20rem;">
+              <img src="./assets/img/kiwi.jpg" class="card-img-top kiwi-img" style="width: 18rem; height: 15rem;" alt="L">
+              <div class="card-body">
+                <h2 class="card-title text-center">Kiwi</h2>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <h4 class="text-center"> 
+                  <i class="fas fa-minus-circle me-2" onClick="decKg('kiwi')"></i> 
+                   <span id="qnt-kiwi">1</span> KG 
+                  <i class="fas fa-plus-circle ms-2" onClick="incKg('kiwi')"></i>
+                </h4>
+                <a href="#" class="btn btn-info w-100 btn-product">Add to Cart</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+          <!--Product container-3-->
+        <div class="row container-3">
+          <div class="col-md-4">
+            <div class="card card-info" style="width: 20rem;">
+              <img src="./assets/img/watermelon.jpg" class="card-img-top img-container-3" style="width: 18rem; height: 15rem;" alt="watermelon">
+              <div class="card-body">
+                <h2 class="card-title text-center">Watermelon</h2>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <h4 class="text-center"> 
+                  <i class="fas fa-minus-circle me-2" onClick="decKg('watermelon')"></i> 
+                   <span id="qnt-watermelon">1</span> KG 
+                  <i class="fas fa-plus-circle ms-2" onClick="incKg('watermelon')"></i>
+                </h4>
+                <a href="#" class="btn btn-info w-100 btn-product">Add to Cart</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="card card-info" style="width: 20rem;">
+              <img src="./assets/img/strawberry.jpg" class="card-img-top img-container-3" style="width: 18rem; height: 15rem;" alt="strawberry">
+              <div class="card-body">
+                <h2 class="card-title text-center">Strawberry</h2>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <h4 class="text-center"> 
+                  <i class="fas fa-minus-circle me-2" onClick="decKg('strawberry')"></i> 
+                   <span id="qnt-strawberry">1</span> KG 
+                  <i class="fas fa-plus-circle ms-2" onClick="incKg('strawberry')"></i>
+                </h4>
+                <a href="#" class="btn btn-info w-100 btn-product">Add to Cart</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="card card-info" style="width: 20rem;">
+              <img src="./assets/img/pinapple.jpg" class="card-img-top img-container-3" style="width: 18rem; height: 15rem;" alt="pinapple">
+              <div class="card-body">
+                <h2 class="card-title text-center">Pinapple</h2>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <h4 class="text-center"> 
+                  <i class="fas fa-minus-circle me-2" onClick="decKg('pinapple')"></i> 
+                   <span id="qnt-pinapple">1</span> KG 
+                  <i class="fas fa-plus-circle ms-2" onClick="incKg('pinapple')"></i>
+                </h4>
+                <a href="#" class="btn btn-info w-100 btn-product">Add to Cart</a>
+              </div>
+            </div>
+          </div>
+
+
+        </div>
+
+    </div>
+
     
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 
+    <script src="https://kit.fontawesome.com/e872ba44e8.js" crossorigin="anonymous"></script>
+
     <script src="./js/script.js"></script>
-</body>
+   
+  </body>
 </html>
